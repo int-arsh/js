@@ -16,6 +16,12 @@ if(!score){
 
 updateScoreElement();
 
+function autoPlay(){
+  setInterval(function(){
+    const playerMove = pickComputerMove();
+    playGame(playerMove);
+  },1000)
+}
 
 function playGame(playerMove ) {
   const computerMove = pickComputerMove();
