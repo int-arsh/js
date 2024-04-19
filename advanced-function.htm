@@ -33,7 +33,7 @@
       console.log(param);
     }
     display(2);
-
+ 
     function run(param) {
       param();
     }
@@ -41,17 +41,48 @@
       console.log('hello4');
     })
 
-    setTimeout(function () {
-      console.log('timeout');
-    },3000);
+    // setTimeout(function () {
+    //   console.log('timeout');
+    // },3000);
 
-    console.log('next line');
+    // console.log('next line');
 
-    setInterval(function(){
-      console.log('interval');
-    },3000);
+    // setInterval(function(){
+    //   console.log('interval');
+    // },3000);
 
     console.log('next line 2');
+
+    [
+      'make',
+      'wash',
+      'watch'
+    ].forEach((value,index) => { //instead of function(value,index){} use arrow
+      if(value === 'wash'){
+        return;  // works as continue
+      }
+      console.log(index);
+      console.log(value);
+    });
+
+
+
+    const arrowFunction = () => {
+      console.log('hello');
+    }
+    arrowFunction(); 
+
+    const onePram = param => { // for only one param no need of (param)
+      console.log(param+1);
+    };
+    onePram(2);
+
+    const oneLine = () => 2 + 3;
+    console.log(oneLine());
+
+
+
+
   </script>
 </body>
 </html>
