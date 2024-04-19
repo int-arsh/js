@@ -21,7 +21,7 @@ let intervaId;
 
 function autoPlay(){
   if(!isAutoPlaying){
-    intervaId = setInterval(function(){
+    intervaId = setInterval(() => { //use arrow func inside func
       const playerMove = pickComputerMove();
       playGame(playerMove);
     },1000);
